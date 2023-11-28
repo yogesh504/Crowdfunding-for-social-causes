@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding for Social Causes</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mouse"></div>
+    <header>
+        <h1>Crowdfunding for Social Causes</h1>
+    </header>
+
+    <section>
+        <div class="featured-campaign">
+            <h2>Featured Campaign</h2>
+            <div class="campaign">
+                <img src="https://online.sbu.edu/sites/default/files/field/image/successful%20marketing%20campaigns%20202.jpg">
+                <div class="campaign-info">
+                    <h2>Featured Campaign Title</h2>
+                    <div class="progress-bar"></div>
+                    <p>Description of the featured campaign goes here.</p>
+                    <p>Goal: $2000 | Raised: $1200</p>
+                    <a href="#" class="donate-btn">Donate Now</a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Latest Campaigns</h2>
+        <div class="campaigns">
+            <div class="campaign box">
+                <div class="imga"><img src="https://woorise.com/wp-content/uploads/2021/01/types-of-marketing-campaigns.png" alt="Campaign Image" ></div>
+                <div class="campaign-info">
+                    <h2>Campaign Title 1</h2>
+                    <div class="progress-bar"></div>
+                    <p>Description of the campaign goes here.</p>
+                    <p>Goal: $1000 | Raised: $500</p>
+                    <a href="#" class="donate-btn">Donate Now</a>
+                </div>
+            </div>
+
+            <div class="campaign box">
+                <div class="imga"><img src="https://imgeng.jagran.com/images/2023/aug/har-ghar-tiranga-campaign-20231691906164039.jpg" alt="Campaign Image" ></div>
+                <div class="campaign-info">
+                    <h2>Campaign Title 2</h2>
+                    <div class="progress-bar"></div>
+                    <p>Description of another campaign.</p>
+                    <p>Goal: $1500 | Raised: $800</p>
+                    <a href="#" class="donate-btn">Donate Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="testimonial">
+            <p>"This crowdfunding platform made it easy for me to support causes I care about. The process is simple and transparent."</p>
+            <p>- John Doe</p>
+        </div>
+
+        <div class="testimonial">
+            <p>"I appreciate the impact this platform has on various social causes. It's</p>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="script.js"></script>
+ <script>
+    gsap.from(".featured-campaign img",{
+    scale:0.1
+}) 
+gsap.from("header h1",{
+    y:"-200px",
+    scale:0.2
+}) 
+ 
+const m = document.querySelector(".mouse")
+var screen = document.querySelector("body")
+var pho = document.querySelector(".imga")
+var btsn = document.querySelector(".donate-btn")
+
+
+
+screen.addEventListener("mousemove",function(dets){
+    m.style.left = dets.x + "px"
+    m.style.top = dets.y + "px" 
+     
+})
+
+pho.addEventListener("mouseenter",function(){
+
+    m.style.width = "100px"
+    m.style.height = "100px"
+    m.innerHTML = "view"
+    
+     
+         
+})
+pho.addEventListener("mouseleave",function(){
+
+    m.style.width = "20px"
+    m.style.height = "20px" 
+    m.innerHTML = ""
+    
+         
+})
+
+btsn.addEventListener("mouseenter",function(){
+
+    m.style.width = "0px"
+    m.style.height = "0px"
+     
+         
+})
+btsn.addEventListener("mouseleave",function(){
+
+    m.style.width = "20px"
+    m.style.height = "20px" 
+         
+})
+
+ </script>
+</body>
+</html>
